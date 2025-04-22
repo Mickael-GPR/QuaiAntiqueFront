@@ -11995,4 +11995,32 @@ footer.footer {
 p {
   font-family: "Hind Madurai", serif;
   font-size: 18px;
+}
+
+.hero-scene {
+  background-image: url("https://cdn.pixabay.com/photo/2019/04/04/15/30/hamburger-4103070_1280.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.hero-scene-content {
+  position: relative;
+  z-index: 1;
 }/*# sourceMappingURL=main.css.map */
