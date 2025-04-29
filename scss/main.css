@@ -11982,11 +11982,11 @@ body {
 
 main {
   padding: 0 15px;
-  margin-bottom: 250px;
+  margin-bottom: 100px;
 }
 
 footer.footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   padding: 15px;
@@ -12010,6 +12010,7 @@ p {
   justify-content: center;
   color: white;
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .hero-scene::before {
@@ -12057,4 +12058,8 @@ p {
   text-align: center;
   opacity: 0;
   transition: all 0.3s;
+}
+
+.form-label {
+  color: #906427;
 }/*# sourceMappingURL=main.css.map */
