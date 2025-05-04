@@ -12036,7 +12036,8 @@ p {
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
-.image-card:hover .titre-image {
+.image-card:hover .titre-image,
+.image-card:hover .action-image-button {
   opacity: 1;
 }
 .image-card img {
@@ -12056,6 +12057,17 @@ p {
   color: white;
   padding: 10px;
   text-align: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.image-card .action-image-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
   opacity: 0;
   transition: all 0.3s;
 }
