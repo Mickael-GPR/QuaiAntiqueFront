@@ -2,7 +2,7 @@ import Route from "./Route.js";
 import { allRoutes, websiteName } from "./allRoutes.js";
 
 // Création d'une route pour la page 404 (page introuvable)
-const route404 = new Route("404", "Page introuvable", "/pages/404.html");
+const route404 = new Route("404", "Page introuvable", "/pages/404.html", []);
 
 // Fonction pour récupérer la route correspondant à une URL donnée
 const getRouteByUrl = (url) => {
@@ -26,6 +26,8 @@ const LoadContentPage = async () => {
   const path = window.location.pathname;
   // Récupération de l'URL actuelle
   const actualRoute = getRouteByUrl(path);
+
+
   // Récupération du contenu HTML de la route
   const html = await fetch(actualRoute.pathHtml).then((data) => data.text());
   // Ajout du contenu HTML à l'élément avec l'ID "main-page"
@@ -44,6 +46,9 @@ const LoadContentPage = async () => {
 
   // Changement du titre de la page
   document.title = actualRoute.title + " - " + websiteName;
+
+  // Afficher et masquer les éléments en fonction du rôle
+  ShowAndHideElementsForRoles();
 };
 
 // Fonction pour gérer les événements de routage (clic sur les liens)
@@ -55,6 +60,8 @@ const routeEvent = (event) => {
   // Chargement du contenu de la nouvelle page
   LoadContentPage();
 };
+
+
 
 // Gestion de l'événement de retour en arrière dans l'historique du navigateur
 window.onpopstate = LoadContentPage;
